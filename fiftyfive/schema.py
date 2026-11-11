@@ -4210,7 +4210,7 @@ class AccessOptions(sgqlc.types.Type):
     __schema__ = schema
     __field_names__ = (
         "access_type",
-        "private_access_cards",
+        #"private_access_cards",
         "auto_charge_support",
         "authorization_mode",
         "charge_card",
@@ -4219,9 +4219,9 @@ class AccessOptions(sgqlc.types.Type):
     access_type = sgqlc.types.Field(AccessOptionsEnum, graphql_name="accessType")
     """The general access type (private, public paid, public free)."""
 
-    private_access_cards = sgqlc.types.Field(
-        sgqlc.types.list_of(ID), graphql_name="privateAccessCards"
-    )
+    #private_access_cards = sgqlc.types.Field(
+    #    sgqlc.types.list_of(ID), graphql_name="privateAccessCards"
+    #)
     """List of private access cards allowed for this chargepoint."""
 
     auto_charge_support = sgqlc.types.Field(Boolean, graphql_name="autoChargeSupport")
