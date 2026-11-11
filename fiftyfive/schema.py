@@ -4220,7 +4220,7 @@ class AccessOptions(sgqlc.types.Type):
     """The general access type (private, public paid, public free)."""
 
     private_access_cards = sgqlc.types.Field(
-        sgqlc.types.non_null(sgqlc.types.list_of(ID)), graphql_name="privateAccessCards"
+        sgqlc.types.list_of(ID), graphql_name="privateAccessCards"
     )
     """List of private access cards allowed for this chargepoint."""
 
